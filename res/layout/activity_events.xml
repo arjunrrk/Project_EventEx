@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Events">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigation" />
+
+    <TextView
+        android:id="@+id/empty_mail_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_mail_text"
+        android:textSize="20sp"
+        android:textColor="#BDBDBD"
+        android:textStyle="bold"
+        android:layout_centerInParent="true"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?android:attr/windowBackground"
+        app:itemBackground="@color/bgBottomNavigation"
+        android:foreground="?attr/selectableItemBackground"
+        app:itemIconTint="@android:color/white"
+        app:itemTextColor="@android:color/white"
+        app:menu="@menu/navigation"
+        android:layout_alignParentBottom="true"/>
+
+    <ImageView
+        android:id="@+id/empty_mail"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/empty_mailbox"
+        android:layout_above="@id/empty_mail_text"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

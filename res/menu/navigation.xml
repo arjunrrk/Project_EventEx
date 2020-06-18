@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_events"
+        android:icon="@mipmap/baseline_event_white_24dp"
+        android:title="@string/title_events" />
+
+    <item
+        android:id="@+id/navigation_starred"
+        android:icon="@mipmap/baseline_star_outline_white_24dp"
+        android:title="@string/title_starred" />
+
+    <item
+        android:id="@+id/navigation_week"
+        android:icon="@mipmap/baseline_event_available_white_24dp"
+        android:title="@string/title_upcoming" />
+</menu>

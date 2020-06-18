@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">EventEx</string>
+    <string name="title_starred">Starred</string>
+    <string name="title_events">Events</string>
+    <string name="title_upcoming">Week</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_in_to_eventex_with_google">Sign-in to Eventex with Google</string>
+    <string name="empty_mail_text">No event mails</string>
+    <string name="empty_event_text">No events this week</string>
+    <string name="empty_starred_text">No starred events</string>
+
+
+</resources>

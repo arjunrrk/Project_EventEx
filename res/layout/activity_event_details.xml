@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EventDetails">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/event_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30sp"
+        app:layout_constraintTop_toBottomOf="@id/event_subject">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#FFFF9F"
+            android:padding="30sp">
+
+            <RelativeLayout
+                android:id="@+id/rel_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/event_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/event_date_image"
+                    android:padding="5dp"
+                    android:text="Date"
+                    android:textColor="#000000"
+                    android:textSize="23sp" />
+
+                <ImageView
+                    android:id="@+id/event_date_image"
+                    android:layout_width="40dp"
+                    android:layout_height="41dp"
+                    app:srcCompat="@mipmap/date_icon" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rel_date">
+
+                <ImageView
+                    android:id="@+id/event_time_image"
+                    android:layout_width="40dp"
+                    android:layout_height="41dp"
+                    app:srcCompat="@mipmap/time_icon" />
+
+                <TextView
+                    android:id="@+id/event_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/event_time_image"
+                    android:padding="5dp"
+                    android:text="Time"
+                    android:textColor="#000000"
+                    android:textSize="23sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_venue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rel_time">
+
+                <ImageView
+                    android:id="@+id/event_venue_image"
+                    android:layout_width="40dp"
+                    android:layout_height="41dp"
+                    app:srcCompat="@mipmap/venue_icon" />
+
+                <TextView
+                    android:id="@+id/event_venue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/event_venue_image"
+                    android:padding="5dp"
+                    android:text="Venue"
+                    android:textColor="#000000"
+                    android:textSize="23sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rel_venue"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/event_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/event_link_image"
+                    android:padding="5dp"
+                    android:text="Link"
+                    android:textAllCaps="false"
+                    android:textColor="#000000"
+                    android:textSize="23sp" />
+
+                <ImageView
+                    android:id="@+id/event_link_image"
+                    android:layout_width="40dp"
+                    android:layout_height="41dp"
+                    app:srcCompat="@mipmap/link_icon" />
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/event_subject"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:text="Subject"
+        android:layout_marginStart="20dp"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toStartOf="@+id/starred_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/event_toolbar" />
+
+    <LinearLayout
+        android:layout_width="350sp"
+        android:layout_height="1sp"
+        android:layout_marginTop="2sp"
+        android:background="#1a1a1a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/event_subject"
+        tools:ignore="SmallSp" />
+
+
+    <RelativeLayout
+        android:id="@+id/rel_google_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/rel_gmail"
+        android:background="#4488F2">
+
+        <ImageView
+            android:id="@+id/google_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/google_calendar" />
+
+        <TextView
+            android:id="@+id/google_calendar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/google_calendar"
+            android:text="Add reminder"
+            android:textColor="#FFF"
+            android:padding="5dp"
+            android:textSize="25sp"
+            android:layout_marginTop="2dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_gmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+        android:background="#E33534">
+
+        <ImageView
+            android:id="@+id/gmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@mipmap/gmail"/>
+
+        <TextView
+            android:id="@+id/gmail_text"
+            android:padding="5dp"
+            android:textSize="25sp"
+            android:layout_marginTop="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/gmail"
+            android:text="Read the mail"
+            android:textColor="#FFF"/>
+
+    </RelativeLayout>
+
+    <CheckBox
+        android:button="@drawable/starred_icon"
+        android:id="@+id/starred_button"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/event_subject"
+        app:layout_constraintBottom_toBottomOf="@id/event_subject"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
